@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>Ping Pong Minigame</title>
+  </head>
+  <body>
+    <main>
+      <div class="container flex flex-col gap-base py-48">
+        <div class="card shadow-neutral-800">
+          <img src="/img/conor-samuel-vPKGcFEbmjc-unsplash.jpg" alt="">
+          <header class="card-header shadow-neutral-800">
+            <h1>Ping Pong Score Keeper</h1>
+          </header>
+          <div class="card-content flex flex-col gap-base">
+            <p class="text-6xl font-bold">
+              <span data-player="1">0</span> to
+              <span data-player="2">0</span>
+            </p>
+            <p class="text-md">Use the buttons below to keep score.</p>
+            <div class="flex flex-wrap items-center gap-base">
+              <label class="text-lg font-bold" for="num-games">Playing To </label>
+              <select class="dropdown transition-colors" name="games" id="num-games">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+              </select>
+            </div>
+          </div>
+          <div class="button-group flex flex-wrap text-lg">
+            <button class="button transition-colors" data-type="player1">+1 Player 1</button>
+            <button class="button transition-colors" data-type="player2">+1 Player 2</button>
+            <button class="button transition-colors" data-type="reset">Reset</button>
+          </div>
+        </div>
+        <p>
+          Photo by <a class="link transition-outline" href="https://unsplash.com/@csbphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Conor Samuel</a>
+          on <a class="link transition-outline" href="https://unsplash.com/s/photos/ping-pong-paddle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
+      </div>
+    </main>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
