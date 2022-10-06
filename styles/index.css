@@ -1,0 +1,221 @@
+:root {
+  --neutral-100: 0 0% 100%;
+  --neutral-200: 0 0% 87%;
+  --neutral-300: 0 0% 80%;
+  --neutral-800: 0 0% 21%;
+  --neutral-900: 0 0% 0%;
+  --accent-100: 141 53% 53%;
+  --accent-200: 171 94% 20%;
+  --accent-300: 204 71% 40%;
+  --accent-400: 217 71% 53%;
+  --accent-500: 348 86% 40%;
+
+  --generic-families: BlinkMacSystemFont, -apple-system, "Segoe UI",
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --size-base: 1em;
+  --size-md: 1.25em;
+  --size-lg: 1.5em;
+  --size-6xl: 3em;
+
+  --weight-base: 400;
+  --weight-700: 700;
+}
+
+body {
+  font-family: var(--generic-families);
+  font-size: var(--size-base);
+  font-weight: var(--weight-base);
+  background-color: hsl(var(--neutral-100));
+  color: hsl(var(--neutral-800));
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: var(--size-base);
+}
+
+/* Composition */
+.flex {
+  display: flex;
+}
+
+/* Utilities */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  max-width: 40rem;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-base {
+  gap: 1rem;
+}
+
+.py-48 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.text-md {
+  font-size: var(--size-md);
+  line-height: 1.75rem;
+}
+
+.text-lg {
+  font-size: var(--size-lg);
+  line-height: 2rem;
+}
+
+.text-6xl {
+  font-size: var(--size-6xl);
+  line-height: 1;
+}
+
+.font-bold {
+  font-weight: var(--weight-700);
+}
+
+.shadow-neutral-800 {
+  box-shadow:
+    0 0.5em 1em -0.125em hsl(var(--neutral-800) / 0.15),
+    0 0 0.0625em hsl(var(--neutral-800) / 0.15);
+}
+
+.text-accent-100 {
+  color: hsl(var(--accent-100));
+}
+
+.text-accent-500 {
+  color: hsl(var(--accent-500));
+}
+
+.transition-colors {
+  transition-property: background-color, border-color,
+    color, outline;
+  transition-timing-function: ease-in-out;
+  transition-duration: 100ms;
+}
+
+.transition-outline {
+  transition-property: outline, outline-offset;
+  transition-timing-function: ease-in-out;
+  transition-duration: 100ms;
+}
+
+/* Block */
+.card-header {
+  padding: 0.75rem 1rem;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.dropdown {
+  background-color: var(--dropdown-bg, hsl(var(--neutral-100)));
+  border: 0.0625em solid var(--dropdown-border, hsl(var(--neutral-200)));
+
+  padding: 0.4em 2em 0.4em 1em;
+  background-image: url('/img/chevron-down.png');
+  background-position: calc(100% - 1em) 50%;
+  background-size: 0.6em;
+  background-repeat: no-repeat;
+  border-radius: 5em;
+  color: inherit;
+  cursor: pointer;
+  --webkit-appearance: none;
+  appearance: none;
+}
+
+.button-group > * {
+  flex: 1 1 auto;
+}
+
+.button {
+  background-color: var(--button-bg, transparent);
+  border: 0.0625em solid var(--button-border, hsl(var(--neutral-900)));
+  color: var(--button-color, hsl(var(--neutral-900)));
+
+  padding: 0.75rem;
+  width: 10rem;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.link {
+  color: inherit;
+}
+
+/* Exception */
+.dropdown:hover {
+  border-color: hsl(var(--neutral-300));
+}
+
+.dropdown:focus {
+  border-color: hsl(var(--accent-300));
+  outline: 0.3em solid hsl(var(--accent-300) / 0.25);
+}
+
+.button[data-type="player1"] {
+  --button-bg: hsl(var(--accent-200));
+  --button-border: hsl(var(--neutral-100));
+  --button-color: hsl(var(--neutral-100));
+  --button-outline: var(--accent-200);
+}
+
+.button[data-type="player2"] {
+  --button-bg: hsl(var(--accent-300));
+  --button-border: hsl(var(--neutral-100));
+  --button-color: hsl(var(--neutral-100));
+  --button-outline: var(--accent-300);
+}
+
+.button[data-type="reset"] {
+  --button-bg: hsl(var(--accent-500));
+  --button-border: hsl(var(--neutral-100));
+  --button-color: hsl(var(--neutral-100));
+  --button-outline: var(--accent-500);
+}
+
+.button:focus {
+  outline: 0.125em solid hsl(var(--button-outline) / 0.75);
+}
+
+.button:not(:disabled):hover {
+  opacity: 0.9;
+}
+
+.button:not(:disabled):active {
+  opacity: 0.8;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: none;
+  outline-offset: 0.25em;
+}
