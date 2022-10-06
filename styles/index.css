@@ -105,6 +105,10 @@ h1 {
     0 0 0.0625em hsl(var(--neutral-800) / 0.15);
 }
 
+.text-neutral-800 {
+  color: hsl(var(--neutral-800));
+}
+
 .text-accent-100 {
   color: hsl(var(--accent-100));
 }
