@@ -28,6 +28,12 @@ function isGameOver() {
   });
 }
 
+function isButtonDisabled() {
+  return buttons.some((button) => (
+    button.hasAttribute('disabled')
+  ));
+}
+
 function showResults() {
   scores.forEach((score) => {
     let playerScore = parseInt(score.textContent);
@@ -75,5 +81,7 @@ buttons.forEach((button) => {
 
 roundSelect.addEventListener('input', () => {
   resetScores();
-  enableButtons();
+  if (isButtonDisabled()) {
+    enableButtons();
+  }
 });
