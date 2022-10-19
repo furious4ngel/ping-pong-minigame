@@ -155,7 +155,7 @@ h1 {
 
   padding: 0.4em 2em 0.4em 1em;
   min-width: 4.375rem;
-  background-image: url('/img/chevron-down.png');
+  background-image: url('img/chevron-down.png');
   background-position: calc(100% - 1em) 50%;
   background-size: 0.6em;
   background-repeat: no-repeat;
